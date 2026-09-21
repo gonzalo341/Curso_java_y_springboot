@@ -35,11 +35,11 @@ public class ejerciciosClase4 {
 
 //        System.out.println("--------------------------------------");
 //
-//        System.out.println("El resultado de la suma es: " + (a+=1));
-//        System.out.println("El resultado de la resta es: " + (a-=1));
-//        System.out.println("El resultado de la multiplicacion es: " + (a*=2));
-//        System.out.println("El resultado de la division es: " + (a/=2));
-//        System.out.println("El resultado del resto es: " + (a%=2));
+//        System.out.println("El resultadoOr de la suma es: " + (a+=1));
+//        System.out.println("El resultadoOr de la resta es: " + (a-=1));
+//        System.out.println("El resultadoOr de la multiplicacion es: " + (a*=2));
+//        System.out.println("El resultadoOr de la division es: " + (a/=2));
+//        System.out.println("El resultadoOr del resto es: " + (a%=2));
 
 //        System.out.println("--------------------------------------");
 
@@ -83,17 +83,110 @@ public class ejerciciosClase4 {
 
 //      ----------------------------------------------------------------------------------------------------------------
 //      Ejercicios
-        //        System.out.println("--------------------------------------");
+        System.out.println(" ---------- Ejercicio 1 ----------");
 
-        //Ejercicios:
-
+        // Variables enteras o float
         int a = 5;
         float b = 4f;
 
+        // Variables independientes:
         float suma = a + b;
-        System.out.println("La suma de a +b: " + suma);
-        System.out.println("La resta de a - b es: "  + (a-b));
+        float resta = a - b;
+        float multiplicacion = a * b;
+        float division = a / b;
+        float modulo = a % b;
 
+        // Resultados por consola:
+        System.out.println("El valor de 'a' es: " + a);
+        System.out.println("El valor de 'b' es: " + b);
+        System.out.println("----------------------------------");
+        System.out.println("La suma de a + b: " + suma);
+        System.out.println("La resta de a - b es: "  + resta);
+        System.out.println("La multiplicacion de a * b: " + multiplicacion);
+        System.out.println("La division de a * b: " + division);
+        System.out.println("La modulo de a * b: " + modulo);
 
+        System.out.println("\n ---------- Ejercicio 2 ----------");
+        // Variable inicial:
+        float c = 3.5f;
+
+        c += 1;
+        System.out.println("El valor actual de c al usar += es: " + c);
+        c -= 1;
+        System.out.println("El valor actual de c al usar -= es: " + c);
+        c *= 2;
+        System.out.println("El valor actual de c al usar *= es: " + c);
+        c /= 2;
+        System.out.println("El valor actual de c al usar /= es: " + c);
+
+        System.out.println("\n ---------- Ejercicio 3 ----------");
+
+        // Booleanos verdaderos
+        boolean comparacionVerdadera1 = (18 > 15);
+        boolean comparacionVerdadera2 = (18 == 18);
+        boolean comparacionVerdadera3 = (18 <= 24);
+
+        // Vista por consola:
+        System.out.println("18 es mayor que 15?: " + comparacionVerdadera1);
+        System.out.println("18 es igual que 18?: " + comparacionVerdadera2);
+        System.out.println("18 es menor o igual que 24?: " + comparacionVerdadera3);
+
+        System.out.println("\n ---------- Ejercicio 4 ----------");
+
+        boolean comparacionFalsa1 = (18 >= 24);
+        boolean comparacionFalsa2 = (18 != 18);
+        boolean comparacionFalsa3 = (18 < 15);
+
+        // Vista por consola:
+        System.out.println("18 es mayor o igual que 24?: " + comparacionFalsa1);
+        System.out.println("18 es distinto que 18?: " + comparacionFalsa2);
+        System.out.println("18 es menor que 15?: " + comparacionFalsa3);
+
+        System.out.println("\n ---------- Ejercicio 5 ----------");
+
+        System.out.println("El valor de 'a' es: " + a);
+
+        boolean enRango = (a > 0) && (a < 10);
+
+        System.out.println("El valor de 'a' esta entre 0 y 10?: " + enRango);
+
+        System.out.println("\n ---------- Ejercicio 6 ----------");
+
+        boolean tienesMercadoPago = true;
+        boolean tienesEfectivo = false;
+
+        boolean resultadoOr = (tienesMercadoPago || tienesEfectivo);
+        System.out.println("Puedes pagar?:  " + resultadoOr);
+
+        System.out.println("\n ---------- Ejercicio 7 ----------");
+
+        System.out.println("El valor de 'a' esta entre 0 y 10?: " + !enRango);
+        System.out.println("puedes pagar?:  " + !resultadoOr);
+
+        System.out.println("\n ---------- Ejercicio 8 ----------");
+
+        System.out.println("Valor inicial:  " + a);
+        System.out.println("Prefijo (++x):  " + ++a);
+        System.out.println("Postfijo (x++)  " + a++);
+        System.out.println("Valor final:    " + a);
+
+        System.out.println("\n ---------- Ejercicio 9 ----------");
+        // Division entera y flotante:
+        int divisionEntera = 7/2;
+        float divisionflotante = 7f/2;
+
+        // Resultados por consola:
+        System.out.println("El resultado de 7 / 2 es: " + divisionEntera);
+        System.out.println("El resultado de 7.0 / 2 es: " + divisionflotante);
+
+        System.out.println("\n ---------- Ejercicio 10 ----------");
+
+        int d = 6;
+        int e = 4;
+
+        boolean expresionCombinada = ((d + e) > 0) && ((d % e) == 0);
+        System.out.println("El resultado de la expresion combinada (d + e) > 0 && (d % e) == 0 es: " + expresionCombinada);
+        System.out.println("Primera parte: (d + e) es: " + (d + e) + " y " + (d + e) + " es mayor que 0?: " + ((d + e) > 0));
+        System.out.println("Segunda parte: (d % e) es: " + (d % e) + " y " + (d % e) + " es igual que 0?: " + ((d%e)==0));
     }
 }
