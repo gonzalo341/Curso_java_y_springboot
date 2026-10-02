@@ -1,4 +1,4 @@
-public class ejerciciosClase3 {
+public class EjerciciosClase3 {
     static void main() {
         //Ejercicio 1
         /*
