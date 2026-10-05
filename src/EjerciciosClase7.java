@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class EjerciciosClase7 {
@@ -78,13 +79,106 @@ public class EjerciciosClase7 {
 
 
         System.out.println("\n ---------- Ejercicio 2: Array de cadenas ----------\n");
+        // Crea un array con los nombres de 4 ciudades usando la sintaxis de llaves {...} e imprime
+        // la ciudad ubicada en la segunda posición (índice 1).
+        String[] ciudades = {"Mendoza", "Buenos Aires", "Córdoba", "Rosario"};
+
+        System.out.println(Arrays.toString(ciudades));
+        System.out.println(String.format("%n_ El nombre de la segunda ciudad guardada es: %s", ciudades[1]));
+
         System.out.println("\n ---------- Ejercicio 3: Lectura de tamaño ----------\n");
+        // Declara un array de decimales (double) e imprime en consola su longitud total mediante
+        // la propiedad .length.
+
+        double[] decimales = {1.5 , 2.8 , 3.56, 2.45};
+
+        System.out.println(Arrays.toString(decimales));
+        System.out.println(String.format("%n_ La longitud del array decimales[] es de: %d", decimales.length));
+
         System.out.println("\n ---------- Ejercicio 4: Modificación de elemento ----------\n");
+        // Crea un array con 3 números, modifica el valor alojado en el índice central (índice 1) e imprime
+        // el valor antes y después de la modificación.
+
+        double[] numModificales = {1.56, 2.45, 3.56};
+
+        System.out.println(String.format("_ El array actual tiene los siguientes valores: %.2f - %.2f - %.2f", numModificales[0], numModificales[1], numModificales[2]));
+
+        System.out.println("\nIngrese un nuevo valor para el indice 1: ");
+        numModificales[1] = sc.nextDouble();
+
+        System.out.println(String.format("%n_ El array actual tiene los siguientes valores: %.2f, %.2f, %.2f", numModificales[0], numModificales[1], numModificales[2]));
+
+        sc.nextLine(); // Limpiar escaner
         System.out.println("\n ---------- Ejercicio 5: Suma manual ----------\n");
+        // Declara un array de 3 enteros y calcula la suma total de sus elementos accediendo individualmente
+        // a cada posición (array + array + array).
+
+        int[] numEnteros = new int[3];
+
+        for (int i = 0; i < numEnteros.length; i++) {
+            System.out.println(String.format("Ingrese el %d numero: ", (i+1)));
+            numEnteros[i] = sc.nextInt();
+        }
+
+        int sumTotal = numEnteros[0] + numEnteros[1] + numEnteros[2];
+
+        System.out.println(String.format("%n_ La suma total del array es de: %d", sumTotal));
+
+        sc.nextLine(); // Limpiar escaner
         System.out.println("\n ---------- Ejercicio 6: Acceso dinámico ----------\n");
+        // Dado un array de cadenas de texto de cualquier longitud, accede e imprime su último elemento
+        // utilizando la fórmula .length - 1.
+        String[] arrayString = new String[4];
+
+        for (int i = 0; i < arrayString.length; i++) {
+            System.out.println(String.format("Ingrese la %d cadena de texto: ", (i+1)));
+            arrayString[i] = sc.nextLine();
+        }
+
+        System.out.println(String.format("%n_ El ultimo elemento es: %s", arrayString[arrayString.length-1]));
+
         System.out.println("\n ---------- Ejercicio 7: Verificación de ceros ----------\n");
+        //  Crea un array de enteros de tamaño 3 utilizando new int e imprime sus 3 posiciones para
+        //  comprobar que contienen el valor 0 por defecto.
+
+        int[] newArrayInt = new int[3];
+
+        for (int i = 0; i < newArrayInt.length; i++) {
+            System.out.println(String.format("El valor del indice %d es: %d", i, newArrayInt[i]));
+        }
         System.out.println("\n ---------- Ejercicio 8: Verificación de nulos ----------\n");
+        // Crea un array de cadenas de texto de tamaño 2 mediante new String e imprime sus celdas para
+        // verificar que contienen el valor null.
+
+        String[] newArrayString = new String[2];
+
+        for (int i = 0; i < newArrayString.length; i++) {
+            System.out.println(String.format("El valor del indice %d es: %s", i, newArrayString[i]));
+        }
+
         System.out.println("\n ---------- Ejercicio 9: Prueba de excepción ----------\n");
+        // Escribe intencionadamente una instrucción que intente acceder a un índice fuera de rango(por ejemplo,
+        // el índice 5 en un array de tamaño 3) para observar la excepción ArrayIndexOutOfBoundsException en la consola.
+
+        //String[] newArrayError = new String[3];
+
+        //System.out.println(newArrayError[5]);
+
+        sc.nextLine(); // Limpiar escaner
         System.out.println("\n ---------- Ejercicio 10: Cálculo de promedio ----------\n");
+        //  Crea un array con 4 notas decimales, calcula la suma de todas ellas e imprime la nota promedio dividiendo
+        //  la suma entre la cantidad total de notas.
+
+        float[] notas = new float[4];
+
+        for (int i = 0; i < notas.length; i++) {
+            System.out.println(String.format("Ingrese nota (decimal) %d: ", (i + 1)));
+            notas[i] = sc.nextFloat();
+        }
+
+        float sumaNota = notas[0] + notas[1] + notas[2] + notas[3];
+        float media = (sumaNota / notas.length);
+
+        System.out.println(String.format("%n_ El promedio de las notas ingresadas es de: %.2f", media));
     }
 }
