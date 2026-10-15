@@ -108,6 +108,5 @@ public class EjerciciosClase10 {
 //        System.out.println("\n ---------- Ejercicio 10: Interrupción Temprana con break ----------\n");
 //        // Recorre un array de números enteros que contenga valores positivos y negativos, y utiliza break para
 //        // detener el bucle en cuanto se detecte el primer número negativo.
-
     }
 }
