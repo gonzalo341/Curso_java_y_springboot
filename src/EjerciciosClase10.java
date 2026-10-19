@@ -75,7 +75,6 @@ public class EjerciciosClase10 {
         // Control de Ciclos: break y continue
 
         // =======================================================================
-        // Ejercicios de practica
 
         System.out.println("\n ---------- Ejercicio 1: Conteo Ascendente ----------\n");
         // Imprime los números enteros del 1 al 10 utilizando un bucle while.
