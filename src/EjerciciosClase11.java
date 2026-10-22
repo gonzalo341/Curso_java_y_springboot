@@ -50,8 +50,8 @@ public class EjerciciosClase11 {
 
         // =======================================================================
 
-//        // =======================================================================
-//        // Ejercicios de Practica
+        // =======================================================================
+        // Ejercicios de Practica
 
         System.out.println("\n ---------- Ejercicio 1: Mensaje de Bienvenida ----------\n");
         // Crea un método void sin parámetros llamado welcome() que imprima por consola el mensaje:
@@ -127,7 +127,7 @@ public class EjerciciosClase11 {
         System.out.println("Ingrese un numero positivo entero: ");
         int numPositivo = sc.nextInt();
 
-        int factorial = CalcularFactorial(numPositivo);
+        long factorial = CalcularFactorial(numPositivo);
 
         System.out.println("El factorial de " + numPositivo + " es: " + factorial);
 
@@ -138,21 +138,15 @@ public class EjerciciosClase11 {
 
         ArrayList<String> listaDePalabras = new ArrayList<>();
         String palabraIngresada = "";
+
         do {
             System.out.println("Ingrese una palabra (no ingrese ningún valor para salir):");
             palabraIngresada = sc.nextLine();
-            if (palabraIngresada.equals("")) {
-                continue;
-            }
 
-        } while (palabraIngresada.equals(""));
-        listaDePalabras.add("hola");
-        listaDePalabras.add("mundo");
-        listaDePalabras.add("de");
-        listaDePalabras.add("java");
+            listaDePalabras.add(palabraIngresada);
+        } while (!palabraIngresada.equals(""));
 
-
-        System.out.println(listaDePalabras);
+        ImprimirListaDePalabras(listaDePalabras);
     }
 
     public static void Saludar(){
@@ -212,12 +206,18 @@ public class EjerciciosClase11 {
         return promedio;
     }
 
-    public static int CalcularFactorial(int numIngresado) {
-        int resultado = 1;
+    public static long CalcularFactorial(int numIngresado) {
+        long resultado = 1;
 
         for (int i = 1; i <= numIngresado; i++) {
             resultado = resultado * i;
         }
         return resultado;
+    }
+
+    public static void ImprimirListaDePalabras(ArrayList<String> listaDePalabras){
+        for (String palabra : listaDePalabras) {
+            System.out.println(palabra);
+        }
     }
 }
