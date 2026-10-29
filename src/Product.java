@@ -1,10 +1,21 @@
 public class Product {
     String name;
-    double price;
+    private double price;
 
     public Product(String name, double price) {
         this.name = name;
         this.price = price;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        if (price > 0) {
+            this.price = price;
+        }
+        this.price = 0.0;
     }
 
     public double applyDiscount(double percentage){

@@ -72,7 +72,7 @@ public class EjerciciosClase12 {
         // Crea una clase Student con el atributo score (double) y un metodo booleano hasPassed() que
         // devuelva true si la nota es mayor o igual a 6.0.
 
-        Student student1 = new Student();
+        Student student1 = new Student("Gonzalo", 2);
 
         System.out.println("Ingrese la nota del estudiante (por ej: 7.5): ");
         student1.score = sc.nextDouble();
@@ -85,9 +85,7 @@ public class EjerciciosClase12 {
         // Diseña una clase BankAccount con el atributo balance (double) y un metodo deposit(double amount)
         // que incremente el saldo actual.
 
-        BankAccount cuenta1 = new BankAccount();
-
-        cuenta1.balance = 350000.00;
+        BankAccount cuenta1 = new BankAccount(350000.00);
 
         cuenta1.mostrarBalance();
 
@@ -148,7 +146,7 @@ public class EjerciciosClase12 {
 
         product1.applyDiscount(15.0);
 
-        System.out.println("Precio de " + product1.name + ": $" + product1.price);
+        System.out.println("Precio de " + product1.name + ": $" + product1.getPrice());
 
     }
 }

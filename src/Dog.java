@@ -15,4 +15,9 @@ public class Dog extends Animal{
         super.eat(); // Ejecuta primero la lógica de comer del padre
         System.out.println("El perro come alegremente en su plato.");
     }
+
+    @Override
+    public void makeSaidSound() {
+        System.out.println("El perro ladra: ¡Guau!");
+    }
 }
