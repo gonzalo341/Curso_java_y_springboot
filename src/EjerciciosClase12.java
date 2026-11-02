@@ -60,7 +60,7 @@ public class EjerciciosClase12 {
         // Diseña una clase Car con atributos brand y model, y un metodo showData() que muestre los detalles
         // del vehículo.
 
-        Car car1 = new Car();
+        Car car1 = new Car("","",70);
 
         car1.brand = "Tesla";
         car1.model = "Model Y";
@@ -100,7 +100,7 @@ public class EjerciciosClase12 {
         // Crea una clase Rectangle con atributos width y height, y un metodo que devuelva el área total
         // del rectángulo (width * height).
 
-        Rectangle rectangle1 = new Rectangle();
+        Rectangle rectangle1 = new Rectangle("Roja",0,0);
 
         System.out.println("\nIngrese la altura en decimal del rectángulo: ");
         rectangle1.height = sc.nextDouble();
